@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Register Form Start</title>
+  <link rel="stylesheet" href="question_css.css">
+</head>
+
+<body>
+  <script src="userdata.js"></script>
+  <form class="signup-form">
+
+    <!-- form header -->
+    <div class="form-header">
+      <h1> COVID-19 CASE
+        QUESTIONNAIRE </h1>
+    </div>
+
+    <!-- form body -->
+    <div class="form-body">
+      <button type="button" class="btn" onclick="getDetails()">Get details </button>
+      <!-- Firstname and Lastname -->
+      <div class="horizontal-group">
+        <div class="form-group left">
+          <label for="firstname" class="label-title">Name</label>
+          <!-- <input type="text" id="firstname" class="form-input" placeholder="enter your first name" 
+            required="required" />-->
+          <p id="Display_firstname"></p>
+
+        </div>
+        <div class="form-group right">
+          <label for="Display_lastname" class="label-title">Surname</label>
+          <!-- <input type="text" id="lastname" class="form-input" placeholder="enter your surname name"> -->
+          <p id="Display_lastname"></p>
+
+        </div>
+
+      </div>
+      <br><br>
+
+      <!-- Symptoms-->
+
+      <div class="horizontal-group">
+        <h3 class="form-header">Symptoms</h3>
+        <div class="form-group left">
+          <label class="label-title" id="fever">Fever:</label>
+          <div class="input-group">
+            <label for="fy">
+              <input type="radio" id="fy" name="fever" value="fever"> Yes</label>
+            <label for="fn">
+              <input type="radio" id="fn" name="fever" value="fever"> No</label>
+            <label for="fns">
+              <input type="radio" id="fns" name="fever" value="fever"> Not sure</label>
+
+          </div>
+        </div>
+        
+        <!--cough-->
+        <div class="form-group left">
+          <label class="label-title" id="Cough">Dry Cough:</label>
+
+          <div class="input-group">
+            <input type="radio" id="Coughy" name="Cough" value="Cough">
+            <label for="Coughy">Yes</label>
+            <input type="radio" id="Coughn" name="Cough" value="Cough">
+            <label for="Coughn">No</label>
+            <input type="radio" id="Coughns" name="Cough" value="Cough">
+            <label for="Coughns">Not Sure</label>
+          </div>
+        </div>
+
+        <!-- chest pain or pressure -->
+
+        <div class="form-group left">
+          <label class="label-title" id="chest">chest pain or pressure:</label>
+
+          <div class="input-group">
+            <input type="radio" id="chesty" name="chest" value="chest">
+            <label for="chesty">Yes</label>
+            <input type="radio" id="chestn" name="chest" value="chest">
+            <label for="chestn">No</label>
+            <input type="radio" id="chestns" name="chest" value="chest">
+            <label for="chestns">Not Sure</label>
+          </div>
+        </div>
+
+        <!-- //loss of speech or movement -->
+
+
+        <div class="form-group left">
+          <label class="label-title" id="speech_movement">loss of speech or movement :</label>
+
+          <div class="input-group">
+            <input type="radio" id="speech_y" name="speech_movement" value="speech_movement">
+            <label for="speech_y">Yes</label>
+            <input type="radio" id="speech_n" name="speech_movement" value="speech_movement">
+            <label for="speech_n">No</label>
+            <input type="radio" id="speech_ns" name="speech_movement" value="speech_movement">
+            <label for="speech_ns">Not Sure</label>
+          </div>
+        </div>
+
+        <!-- tiredness -->
+
+        <!-- chest_pain, lossOfSpeech, tiredness; -->
+        <div class="form-group right">
+          <label class="label-title" id="tiredness">tiredness:</label>
+
+          <div class="input-group">
+            <input type="radio" id="tiredness_y" name="tiredness" value="tiredness">
+            <label for="tiredness_y">Yes</label>
+            <input type="radio" id="tiredness_n" name="tiredness" value="tiredness">
+            <label for="tiredness_n">No</label>
+            <input type="radio" id="tiredness_ns" name="tiredness" value="tiredness">
+            <label for="tiredness_ns">Not Sure</label>
+          </div>
+        </div>
+
+
+        <div class="form-group left">
+          <label class="label-title" id="Chills">Chills or rigors:</label>
+          <div class="input-group">
+            <input type="radio" id="Chills_y" name="Chills" value="Chills">
+            <label for="Chills_y">Yes</label>
+            <input type="radio" id="Chills_n" name="Chills" value="Chills">
+            <label for="Chills_n">No</label>
+            <input type="radio" id="Chills_ns" name="Chills" value="Chills">
+            <label for="Chills_ns">Not Sure</label>
+          </div>
+        </div>
+        <div class="form-group left">
+          <label class="label-title" id="Sore">Sore throat:</label>
+          <div class="input-group">
+            <label for="Sorey">
+              <input type="radio" id="Sorey" name="Sore" value="Sore"> Yes</label>
+            <label for="Soren">
+              <input type="radio" id="Soren" name="Sore" value="Sore"> No</label>
+            <label for="Sore_ns">
+              <input type="radio" name="Sore" value="sore" id="Sore_ns"> Not sure</label>
+
+          </div>
+        </div>
+        <div class="form-group left">
+          <label class="label-title" id="Shortness">Shortness of breath:</label>
+          <div class="input-group">
+            <label for="Shortness_y">
+              <input type="radio" id="Shortness_y" name="Shortness" value="Shortness"> Yes</label>
+            <label for="Shortness_n">
+              <input type="radio" id="Shortness_n" name="Shortness" value="Shortness"> No</label>
+            <label for="Shortness_ns">
+              <input type="radio" id="Shortness_ns" name="Shortness" value="Shortness"> Not sure</label>
+
+          </div>
+        </div>
+        <div class="form-group left">
+          <label class="label-title" id="Runny">Runny nose:</label>
+          <div class="input-group">
+            <label for="Runny_y">
+              <input type="radio" id="Runny_y" name="Runny" value="Runny"> Yes</label>
+            <label for="Runny_n">
+              <input type="radio" id="Runny_n" name="Runny" value="Runny"> No</label>
+            <label for="Runny_ns">
+              <input type="radio" id="Runny_ns" name="Runny" value="Runny"> Not sure</label>
+
+          </div>
+        </div>
+        <div class="form-group left">
+          <label class="label-title" id="Headache">Headache:</label>
+          <div class="input-group">
+            <label for="Headache_y">
+              <input type="radio" id="Headache_y" name="Headache" value="Headache"> Yes</label>
+            <label for="Headache_n">
+              <input type="radio" id="Headache_n" name="Headache" value="Headache"> No</label>
+            <label for="Headache_ns">
+              <input type="radio" id="Headache_ns" name="Headache" value="Headache"> Not sure</label>
+
+          </div>
+        </div>
+        <div class="form-group left">
+          <label class="label-title" id="Fatigue">Fatigue:</label>
+          <div class="input-group">
+            <label for="Fatigue_y">
+              <input type="radio" id="Fatigue_y" name="Fatigue" value="Fatigue"> Yes</label>
+            <label for="Fatigue_n">
+              <input type="radio" id="Fatigue_n" name="Fatigue" value="Fatigue"> No</label>
+            <label for="Fatigue_ns">
+              <input type="radio" id="Fatigue_ns" name="Fatigue" value="Fatigue"> Not sure</label>
+
+          </div>
+        </div>
+        <div class="form-group left">
+          <label class="label-title" id="taste">Loss of taste/smell:</label>
+          <div class="input-group">
+            <label for="taste_y">
+              <input type="radio" id="taste_y" name="taste" value="taste"> Yes</label>
+            <label for="taste_n">
+              <input type="radio" id="taste_n" name="taste" value="taste"> No</label>
+            <label for="taste_ns">
+              <input type="radio" id="taste_ns" name="taste" value="taste"> Not sure</label>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- form footer -->
+      <div>
+        <button type="button" class="btn" onclick="getSymptoms()">
+          <a href="results.html">
+            Submit
+          </a></button>
+      </div>
+
+  </form>
+
+</body>
+
+</html>
